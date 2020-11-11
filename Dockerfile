@@ -8,7 +8,7 @@ ENV ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379"
 ENV ETCD_ADVERTISE_CLIENT_URLS="http://0.0.0.0:2379"
 ENV ETCD_DATA_DIR=${DATA_DIR}
 
-USER ROOT
+USER root
 
 RUN apk update && \
     apk --no-cache \ 
