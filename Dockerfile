@@ -2,6 +2,8 @@ FROM ghcr.io/concepting-com-br/base-image:latest
 
 LABEL maintainer="fvilarinho@concepting.com.br"
 
+ENV APP_NAME=etcd
+
 ENV ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379"
 ENV ETCD_ADVERTISE_CLIENT_URLS="http://0.0.0.0:2379"
 ENV ETCD_DATA_DIR=${DATA_DIR}
