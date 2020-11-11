@@ -20,6 +20,7 @@ COPY src/main/resources/bin/* ${BIN_DIR}/
 COPY src/main/resources/etc/* ${ETC_DIR}/
 
 RUN chmod +x ${BIN_DIR}/*.sh && \
+    chown -R user:group ${BIN_DIR} && \ 
     ln -s ${BIN_DIR}/startup.sh /entrypoint.sh
     
 EXPOSE 2379
