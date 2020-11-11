@@ -8,6 +8,8 @@ ENV ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379"
 ENV ETCD_ADVERTISE_CLIENT_URLS="http://0.0.0.0:2379"
 ENV ETCD_DATA_DIR=${DATA_DIR}
 
+USER ROOT
+
 RUN apk update && \
     apk --no-cache \ 
         --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \ 
@@ -21,5 +23,7 @@ RUN chmod +x ${BIN_DIR}/*.sh && \
     ln -s ${BIN_DIR}/startup.sh /entrypoint.sh
     
 EXPOSE 2379
+
+USER user
     
 ENTRYPOINT ["/entrypoint.sh"]
