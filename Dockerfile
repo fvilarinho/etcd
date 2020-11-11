@@ -1,4 +1,4 @@
-FROM ghcr.io/concepting-com-br/base-image:latest
+FROM ghcr.io/concepting-com-br/base-image:1.0.0
 
 LABEL maintainer="fvilarinho@concepting.com.br"
 
