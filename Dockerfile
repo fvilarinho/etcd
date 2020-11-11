@@ -1,6 +1,6 @@
 FROM ghcr.io/concepting-com-br/base-image:latest
 
-LABEL maintainer="fvilarinho@innovativethinking.com.br"
+LABEL maintainer="fvilarinho@concepting.com.br"
 
 ENV ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379"
 ENV ETCD_ADVERTISE_CLIENT_URLS="http://0.0.0.0:2379"
