@@ -1,4 +1,4 @@
-FROM ghcr.io/concepting-com-br/etcd:latest
+FROM ghcr.io/concepting-com-br/base-image:latest
 
 LABEL maintainer="fvilarinho@innovativethinking.com.br"
 
