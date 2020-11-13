@@ -16,8 +16,8 @@ RUN apk update && \
         add etcd \
             etcd-ctl
 
-COPY src/main/resources/bin/* ${BIN_DIR}/
-COPY src/main/resources/etc/* ${ETC_DIR}/
+COPY bin/* ${BIN_DIR}/
+COPY etc/* ${ETC_DIR}/
 
 RUN chmod +x ${BIN_DIR}/*.sh && \ 
     ln -s ${BIN_DIR}/startup.sh /entrypoint.sh
