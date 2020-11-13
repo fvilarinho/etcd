@@ -2,7 +2,7 @@ FROM ghcr.io/concepting-com-br/base-image:1.0.0
 
 LABEL maintainer="fvilarinho@concepting.com.br"
 
-ENV APP_NAME=etcd
+ENV APP_NAME=etcd 
 
 ENV ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379"
 ENV ETCD_ADVERTISE_CLIENT_URLS="http://0.0.0.0:2379"
