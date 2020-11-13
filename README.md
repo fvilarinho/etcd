@@ -3,7 +3,7 @@ Synopsys
 
 This a base image that has the goal to store and centralize configurations/settings.
 It uses the `ghcr.io/concepting-com-br/base-image` and [etcd](https://etcd.io/) as the main engine.
-The configurations/settings are defined using the JSON format. You just need to store then in the `ETC_DIR`.
+The configurations/settings are defined using the JSON format and stored in the `etc` directory.
 
 
 Build status
