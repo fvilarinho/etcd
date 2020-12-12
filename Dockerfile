@@ -21,7 +21,7 @@ RUN apk update && \
 
 COPY bin/startup.sh ${BIN_DIR}/${APP_NAME}-startup.sh
 COPY bin/install.sh ${BIN_DIR}/${APP_NAME}-install.sh
-COPY etc ${ETC_DIR}
+COPY etc/settings.json ${ETC_DIR}/etcd.json
 
 RUN chmod +x ${BIN_DIR}/${APP_NAME}-*.sh
     
