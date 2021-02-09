@@ -2,4 +2,4 @@
 
 etcd &
 
-$BIN_DIR/$APP_NAME-install.sh
+$BIN_DIR/child-install.sh

@@ -17,15 +17,15 @@ RUN apk update && \
         --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \ 
         add etcd
 
-COPY bin/startup.sh ${BIN_DIR}/${APP_NAME}-startup.sh
-COPY bin/install.sh ${BIN_DIR}/${APP_NAME}-install.sh
+COPY bin/startup.sh ${BIN_DIR}/child-startup.sh
+COPY bin/install.sh ${BIN_DIR}/child-install.sh
 COPY etc/settings.json ${ETC_DIR}/etcd.json
 COPY .env ${ETC_DIR}/
 
-RUN chmod +x ${BIN_DIR}/${APP_NAME}-*.sh
+RUN chmod +x ${BIN_DIR}/child-*.sh
     
 EXPOSE 2379
 
 USER user
     
-CMD ["${BIN_DIR}/${APP_NAME}-startup.sh"]
+CMD ["${BIN_DIR}/child-startup.sh"]
