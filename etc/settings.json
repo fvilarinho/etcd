@@ -1,1 +1,4 @@
-{}
+{
+	"buildName": "etcd",
+	"buildVersion": "latest"
+}

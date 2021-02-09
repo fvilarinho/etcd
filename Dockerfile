@@ -2,8 +2,6 @@ FROM ghcr.io/concepting-com-br/base-image:1.0.0
 
 LABEL maintainer="fvilarinho@concepting.com.br"
 
-ENV APP_NAME=etcd 
-
 ENV SETTINGS_HOSTNAME=0.0.0.0
 ENV SETTINGS_PORT=2379
 ENV SETTINGS_URL=http://${SETTINGS_HOSTNAME}:${SETTINGS_PORT}
@@ -22,6 +20,7 @@ RUN apk update && \
 COPY bin/startup.sh ${BIN_DIR}/${APP_NAME}-startup.sh
 COPY bin/install.sh ${BIN_DIR}/${APP_NAME}-install.sh
 COPY etc/settings.json ${ETC_DIR}/etcd.json
+COPY .env ${ETC_DIR}/
 
 RUN chmod +x ${BIN_DIR}/${APP_NAME}-*.sh
     
