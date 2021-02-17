@@ -10,7 +10,7 @@ do
 
 	echo "Adding settings of file $FILENAME..."
 	
-	etcdctl put $KEY "$VALUE"
+	etcdctl put /$KEY "$VALUE"
 	
 	echo "Settings of file $FILENAME added!"
 done
