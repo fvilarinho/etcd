@@ -1,4 +1,16 @@
 {
-	"buildName": "etcd",
-	"buildVersion": "latest"
+	"build":{
+		"name": {
+			"description": "Name of the build.",
+			"value": "etcd"
+		},
+		"version": {
+			"description": "Version of the build.",
+			"value": "latest"
+		}
+	},
+	"port": {
+		"description": "Network port to listen the requests.",
+		"value": 2379
+	}
 }
