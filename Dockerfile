@@ -22,8 +22,10 @@ COPY bin/install.sh ${BIN_DIR}/child-install.sh
 COPY etc/settings.json ${ETC_DIR}/etcd.json
 COPY .env ${ETC_DIR}/
 
-RUN chmod +x ${BIN_DIR}/child-*.sh
-    
+RUN chmod +x ${BIN_DIR}/child-*.sh && \
+    chown -R user:group ${HOME_DIR}/
+    chmod -R o-rwx ${HOME_DIR}/
+
 EXPOSE 2379
 
 USER user
