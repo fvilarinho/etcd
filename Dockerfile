@@ -23,7 +23,7 @@ COPY etc/settings.json ${ETC_DIR}/etcd.json
 COPY .env ${ETC_DIR}/
 
 RUN chmod +x ${BIN_DIR}/child-*.sh && \
-    chown -R user:group ${HOME_DIR}/
+    chown -R user:group ${HOME_DIR}/ && \
     chmod -R o-rwx ${HOME_DIR}/
 
 EXPOSE 2379
