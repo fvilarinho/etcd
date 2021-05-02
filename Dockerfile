@@ -1,4 +1,4 @@
-FROM ghcr.io/concepting-com-br/base-image:1.0.0
+FROM ghcr.io/concepting-com-br/base-image:1.1.0
 
 LABEL maintainer="fvilarinho@concepting.com.br"
 
@@ -25,7 +25,7 @@ COPY .env ${ETC_DIR}/
 RUN chmod +x ${BIN_DIR}/child-*.sh && \
     chown -R user:group ${HOME_DIR}/ && \
     chmod -R o-rwx ${HOME_DIR}/
-
+    
 EXPOSE 2379
 
 USER user
