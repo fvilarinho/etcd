@@ -7,5 +7,3 @@ echo "BUILD_NAME=$BUILD_NAME" > .env
 echo "BUILD_VERSION=$BUILD_VERSION" >> .env
 
 docker-compose push
-
-rm -f .env
