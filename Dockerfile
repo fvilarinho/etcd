@@ -20,7 +20,7 @@ RUN apk update && \
 COPY bin/startup.sh ${BIN_DIR}/child-startup.sh
 COPY bin/install.sh ${BIN_DIR}/child-install.sh
 COPY etc/settings.json ${ETC_DIR}/etcd.json
-COPY .env ${ETC_DIR}/
+COPY .env ${ETC_DIR}/.release
 
 RUN chmod +x ${BIN_DIR}/child-*.sh && \
     chown -R user:group ${HOME_DIR}/ && \
