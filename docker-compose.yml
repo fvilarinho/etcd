@@ -4,7 +4,7 @@ services:
   etcd:
     build:
       context: .
-    image: ghcr.io/fvilarinho/etcd:${BUILD_VERSION}
+    image: ghcr.io/fvilarinho/${BUILD_NAME}:${BUILD_VERSION}
     container_name: etcd
     hostname: etcd
     ports: 
