@@ -5,8 +5,8 @@ services:
     build:
       context: .
     image: ghcr.io/fvilarinho/${BUILD_NAME}:${BUILD_VERSION}
-    container_name: etcd
-    hostname: etcd
+    container_name: ${BUILD_NAME}
+    hostname: ${BUILD_NAME}
     ports: 
       - "2379:2379"
     volumes:
