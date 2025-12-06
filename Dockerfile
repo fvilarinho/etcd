@@ -13,9 +13,7 @@ ENV ETCD_DATA_DIR=${DATA_DIR}
 USER root
 
 RUN apk update && \
-    apk --no-cache \ 
-        --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \ 
-        add etcd
+    apk --no-cache add etcd
 
 COPY bin/startup.sh ${BIN_DIR}/child-startup.sh
 COPY bin/install.sh ${BIN_DIR}/child-install.sh
